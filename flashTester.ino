@@ -99,7 +99,6 @@ void setup() {
 
 void loop() {
     if(flash == 1) {
-        flash = 0;
         
         //We were triggered by the button
         if(triggerTime > 0) {
@@ -116,9 +115,7 @@ void loop() {
         Serial.println("********");
         
         ignore = 0;
-        
-        digitalWrite(FLASH_PIN, HIGH);
-        
+        flash = 0;
     }
 }
 
